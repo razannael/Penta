@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;500;600&display=swap');
+/* font-family: 'Cairo', sans-serif; */
+.login-page{
+    background: linear-gradient(rgba(49, 49, 49, 0.63),rgba(0, 0, 0, 0.575)) , url(/assets/img/البنية\ التحتية.jpg);
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.login-content{
+    text-align: center;
+}
+.login-content .back-img{
+    width: 33%;
+    height: 50%;
+}
+.logo-img{
+    width: 10%;
+}
+.start-50{
+    left: 46% !important;
+}
+.start-25{
+    left: 38% !important;
+}
+.top-50{
+    top: 30% !important;
+}
+.login-content input:focus{
+    border-bottom: 1.8px solid white !important;
+    box-shadow: none !important;
+}
+
+.login-content form {
+    color: #FFF;
+font-family: Cairo;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+
+.login-content button{
+    border-radius: 7px;
+    background: #FFF;
+    width: 70%;
+    color: #945901;
+text-align: center;
+font-family: Cairo;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 207.9%;
+}
+@media screen and (max-width :1242px) {
+    .login-content .back-img{
+        width: 50%;
+        height: 50%;
+    }
+    .login-content button{
+        width: 80%;
+    font-size: 15px;
+    padding: auto !important;
+
+    }
+}
+@media screen and (max-width :915px) {
+    .login-content .back-img{
+        width: 60%;
+    }
+    .login-content button{
+        width: 90%;
+    font-size: 15px;
+    padding: auto !important;
+
+    }
+}
+@media screen and (max-width :807px) {
+    .login-content .back-img{
+        width: 70%;
+    }
+    .login-content button{
+        width: 90%;
+    font-size: 15px;
+    padding: 0%!important;
+    }
+    .logo-img{
+        top:4% !important ;
+        width: 13% !important;
+        left: 43% !important;
+    }
+}
+@media screen and (max-width :480px) {
+    .login-content .back-img{
+        width: 90%;
+        height: 70vh;
+    }
+    .login-content button{
+        width: 100%;
+    font-size: 18px;
+    padding: 0%!important;
+    }
+    .logo-img{
+        top:4% !important ;
+        width: 13% !important;
+        left: 43% !important;
+    }
+    form{
+        font-size: 20px;
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width :450px) {
+    .login-content .back-img{
+        width: 95%;
+    }
+    .login-content button{
+        width: 80% !important;
+    font-size: 18px;
+    padding: 0.5%!important;
+    }
+    .logo-img{
+        top:5% !important ;
+        width: 15% !important;
+        left: 43% !important;
+    }
+    .login-content form{
+        font-size: 22px;
+        width: 40% !important;
+        left: 27% !important;
+        
+    }
+}
+
+@media screen and (max-width :400px) {
+    .login-content .back-img{
+        height: 70vh;
+    }
+    .login-content button{
+        width: 90% !important;
+    font-size: 18px;
+    padding: 1%!important;
+    }
+    .logo-img{
+        top:5% !important ;
+        width: 17% !important;
+        left: 43% !important;
+    }
+    .login-content form {
+        font-size: 22px;
+        width: 60% !important;
+        left: 12% !important;
+    }
+}

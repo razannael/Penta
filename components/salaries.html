@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الموظفين</title>
+    <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../vendor/fontawsome/all.min.css">
+    <link rel="stylesheet" href="../assets/css/mainPage.css">
+    <link rel="stylesheet" href="../assets/css/employee.css">
+    <link rel="stylesheet" href="../assets/css/station.css">
+    <link rel="stylesheet" href="../assets/css/checks.css">
+    <link rel="stylesheet" href="../assets/css/salaries.css">
+    <link rel="stylesheet" href="../assets/css/media.css">
+    
+</head>
+
+<body class="position-relative">
+    <nav class="navbar navbar-expand-lg w-100">
+        <div class="container pe-3">
+            <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item logout" href="../index.html">تسجيل الخروج</a></li>
+                        </ul>
+                        <a class="nav-link dropdown-toggle pe-0" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            أحمد أحمد
+                            <img class="ms-2 me-1" id="personal-img" src="../assets/img/Ellipse 2.png"
+                                alt="personal-img" />
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 mt-1 " href="#"><i class="fa-regular fa-bell"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 mt-1 " href="#"><i class="fa-regular fa-envelope"></i></a>
+                    </li>
+                </ul>
+                <a class="navbar-brand pb-2" href="#">الموظفين/الرواتب</a>
+                <img class="pb-3" id="logo_image" src="../assets/img/Ellipse 1.png" alt="logo" />
+            </div>
+        </div>
+    </nav>
+    <div class="side-bar text-end ">
+        <a class="side-bar-control pe-3 me-1" href="#components" onclick="toggleSidebar()">
+            <img src="../assets/img/menu_FILL0_wght400_GRAD0_opsz48 1.png"/>
+          </a>
+          <ul id="components" class="sideBarContent w-100 list-unstyled ">
+           <li class=" sideBar-item">
+            <a class="text-decoration-none d-flex flex-row-reverse mt-3 pe-3 " href="mainPage.html">
+              <img class="icon" src="../assets/img/home_FILL0_wght400_GRAD0_opsz48 1.png"/>
+              <h6 class="mt-2 me-3"> الرئيسية</h6>
+            </a>
+           </li>
+           <li class=" active employees sideBar-item">
+            <a class=" text-decoration-none d-flex flex-row-reverse mt-3 pe-3 dropdown-toggle" href="#employeeSubMenu" onclick="navigateAndCollapse(event)"  data-bs-toggle="collapse" aria-expanded="false">
+                <img  class="icon " src="../assets/img/badge_FILL0_wght400_GRAD0_opsz48 1.png" onclick="navigateToEmployees()"/>
+                <h6 class="mt-2 me-3"  onclick="navigateToEmployees()"> الموظفين</h6>
+            </a>
+            <ul id="employeeSubMenu" class="collapse list-unstyled">
+               <li>
+                <a class="employees-item text-decoration-none d-flex flex-row-reverse mt-3 pe-2" href="salaries.html">
+                  <img  class="icon" src="../assets/img/attach_money_FILL0_wght400_GRAD0_opsz48 1.png"/>
+                  <h6 class="mt-2 me-3"> الرواتب</h6>
+                </a>
+               </li>
+               <li>
+                <a class="employees-item text-decoration-none d-flex flex-row-reverse mt-3 pe-2 " href="loan.html">
+                  <img  class="icon" src="../assets/img/approval_delegation_FILL0_wght400_GRAD0_opsz48 1.png"/>
+                  <h6 class="mt-2 me-3"> السلف</h6>
+                </a>
+               </li>
+               <li>
+                <a class="employees-item text-decoration-none d-flex flex-row-reverse mt-3 pe-2 pb-2" href="checks.html">
+                  <img class="icon" src="../assets/img/payments_FILL0_wght400_GRAD0_opsz48 1.png"/>
+                  <h6 class="mt-2 me-3"> الشيكات</h6>
+                </a>
+               </li>
+            </ul>
+           </li>
+           <li class="sideBar-item">
+            <a class="text-decoration-none d-flex flex-row-reverse mt-3 pe-3" href="machines.html" >
+              <img  class="icon" src="../assets/img/construction_FILL0_wght400_GRAD0_opsz48 1.png"/>
+              <h6 class="mt-2 me-3"> الاليات</h6>
+            </a>
+           </li>
+           <li class="sideBar-item">
+            <a class="text-decoration-none d-flex flex-row-reverse mt-3 pe-3 " href="sales.html"  >
+              <img  class="icon" src="../assets/img/real_estate_agent_FILL0_wght400_GRAD0_opsz48 1.png"/>
+              <h6 class="mt-2 me-3"> المبيعات</h6>
+            </a>
+           </li>
+           <li class="sideBar-item">
+            <a class=" text-decoration-none d-flex flex-row-reverse mt-3 pe-3" href="expenses.html" >
+              <img  class="icon" src="../assets/img/sell_FILL0_wght400_GRAD0_opsz48 1.png"/>
+              <h6 class="mt-2 me-3"> النفقات</h6>
+            </a>
+           </li>
+          <li class="sideBar-item">
+            <a href="station.html" class=" text-decoration-none d-flex flex-row-reverse mt-3 pe-3 ">
+              <img  class="icon" src="../assets/img/local_gas_station_FILL0_wght400_GRAD0_opsz48 1.png"/>
+              <h6 class="mt-2 me-3"> محطات الوقود</h6>
+            </a>
+          </li>
+          </ul>
+          
+      </div>
+ 
+      <div class="salaries-contents">
+        <div class="checks-contents w-75 ">
+            <div class="d-flex mb-4 check">
+                <a class="btn check-btn text-white me-2" onclick="openEditForm()"><i class="fa-solid fa-file-circle-plus"></i></a>
+                <h4>سجل الرواتب</h4>
+            </div>
+            <table>
+                <tr >
+                  
+                  <th>الحالة</th>
+                  <th>الراتب</th>
+                  <th>الموظف</th>
+                  <th>التاريخ</th>
+                  <th>#</th>
+                </tr>
+                <tr>
+               
+                  <td>hhhhhhhhhhhhh</td>
+                  <td>hhhhhhhhhhhhh</td>
+                  <td>hhhhhhhhhhhhh</td>
+                  <td>hhhhhhhhhhhhh</td>
+                  <td>hhhhhhhh</td>
+                </tr>
+                <tr>
+                 
+                </tr>
+              </table>
+              <div class="form-popup-overlay  text-center text-white" id="overlay">
+              <div class="mt-5 salari-taps">
+                <a href="salari.html" class="me-3 text-decoration-none text-white  py-2 rounded active">الراتب</a>
+                <a href="financial-matters.html" class="me-3 text-decoration-none text-white py-2 rounded">الأمور المالية</a>
+                <a onclick="openInfoTab()" class="me-3 text-decoration-none text-white  py-2 rounded ">المعلومات الأساسية</a>
+              </div>
+              </div>
+              <div class="form-popup rounded text-center" id="editForm">
+             <div class="d-flex justify-content-center">
+              <i class="fa-solid fa-money-check me-2 mt-2 fs-4"></i>
+              <h5 class="mt-2 mb-4">إضافة راتب</h5>
+             </div>
+             <form action="/edit" class="text-center w-100 ms-5 me-3">
+                <div class="row ms-2">
+                  <div class="col-md-4 m-2">
+                    <label>تاريخ اليوم</label>
+                    <input class="rounded" type="date"/>
+                  </div>
+                  <div class="col-md-4 m-2">
+                    <label>الموظف</label>
+                    <input class="rounded" type="text"/>
+                  </div>
+                  <div class="col-md-4 m-2">
+                    <label>نوع الدفعة</label>
+                    <input class="rounded" type="text"/>
+                    <h6 class="desc-text">كاش أو شيكات</h6>
+                  </div>
+                  <div class="col-md-4 m-2">
+                    <label>حالة الدفعة</label>
+                    <input class="rounded" type="text"/>
+                    <h6 class="desc-text">راتب أو عمل إضافي أو سلفة</h6>
+                  </div>
+                  <div class="col-md-4 m-2">
+                    <label>المبلغ</label>
+                    <input class="rounded" type="text"/>
+                  </div>
+                  <div class="col-md-4 m-2">
+                    <label>إضافة شيك</label>
+                    <input class="rounded w-75" type="file" />
+                  </div>
+                  <div class="col-md-8 m-2">
+                    <button type="submit" class="btn ">إضافة</button>
+                    <button type="button" class="btn  cancel" onclick="closeEditForm()">إلغاء</button>
+                  </div>
+                </div>
+                
+            </form>
+           </div>
+
+           <div class="form-popup rounded text-center" id="editForm">
+            <div class="d-flex justify-content-center">
+             <i class="fa-solid fa-money-check me-2 mt-2 fs-4"></i>
+             <h5 class="mt-2 mb-4">إضافة راتب</h5>
+            </div>
+            <form action="/edit" class="text-center w-100 ms-5 me-3">
+               <div class="row ms-2">
+                 <div class="col-md-4 m-2">
+                   <label>تاريخ اليوم</label>
+                   <input class="rounded" type="date"/>
+                 </div>
+                 <div class="col-md-4 m-2">
+                   <label>الموظف</label>
+                   <input class="rounded" type="text"/>
+                 </div>
+                 <div class="col-md-4 m-2">
+                   <label>نوع الدفعة</label>
+                   <input class="rounded" type="text"/>
+                   <h6 class="desc-text">كاش أو شيكات</h6>
+                 </div>
+                 <div class="col-md-4 m-2">
+                   <label>حالة الدفعة</label>
+                   <input class="rounded" type="text"/>
+                   <h6 class="desc-text">راتب أو عمل إضافي أو سلفة</h6>
+                 </div>
+                 <div class="col-md-4 m-2">
+                   <label>المبلغ</label>
+                   <input class="rounded" type="text"/>
+                 </div>
+                 <div class="col-md-4 m-2">
+                   <label>إضافة شيك</label>
+                   <input class="rounded w-75" type="file" />
+                 </div>
+                 <div class="col-md-8 m-2">
+                   <button type="submit" class="btn ">إضافة</button>
+                   <button type="button" class="btn  cancel" onclick="closeEditForm()">إلغاء</button>
+                 </div>
+               </div>
+               
+           </form>
+          </div>
+          <div class="form-popup-overlay  text-center text-white" id="overlay2">
+            <div class="mt-5 salari-taps">
+              <a href="salari.html" class="me-3 text-decoration-none text-white  py-2 rounded ">الراتب</a>
+              <a href="financial-matters.html" class="me-3 text-decoration-none text-white py-2 rounded">الأمور المالية</a>
+              <a onclick="openInfoTab()" class="me-3 text-decoration-none text-white  py-2 rounded active">المعلومات الأساسية</a>
+            </div>
+            </div>
+           <div class="form-popup rounded text-center mb-5" id="main-info">
+            <div class="d-flex justify-content-center mt-5">
+              <div class="mt-5 me-5">
+                 <h5 class="mb-4">اسم الموظف : <span>محمود الشيخ</span></h5>
+                 <h5 class="mb-4"> رقم الهوية : <span>9610555</span></h5>
+                 <h5 class="mb-4"> الراتب : <span>$500</span></h5>
+                 <h5 class="mb-4"> رقم الهاتف: <span> 0503211111</span></h5>
+              </div>
+              <img class="w-25 h-50 ms-5 mt-5" src="/assets/img/Ellipse 36 (1).png"/>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+
+    <script src="../vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/emp.js"></script>
+</body>
+
+</html>

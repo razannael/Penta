@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل الدخول</title>
+  <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/login.css">
+  <link rel="stylesheet" href="/assets/css/media.css">
+</head>
+
+<body>
+  <div class="login-page vh-100 position-relative text-center">
+    <div class="login-content position-absolute mt-5 w-100 position-relative">
+      <img class="back-img mt-5 position-relative" src="/assets/img/Rectangle 2.png" />
+      <img class="logo-img position-absolute start-50" src="/assets/img/Ellipse 1.png" />
+      <form class="position-absolute start-25 top-50 w-25 text-center" onsubmit="redirectToMain(); return false;">
+        <div class="mb-4 text-end">
+          <label class="form-label m-0">اسم المستخدم</label>
+          <input type="text"
+            class="m-0 form-control bg-transparent border-0 border-bottom border-white rounded-0 text-white">
+        </div>
+        <div class="mb-4 text-end">
+          <label class="form-label m-0">كلمة المرور</label>
+          <input type="password"
+            class="m-0 form-control bg-transparent border-0 border-bottom border-white rounded-0 text-white">
+        </div>
+        <button type="submit" class="mt-5 p-1 ps-5 pe-5 border-0">تسجيل الدخول</button>
+      </form>
+    </div>
+  </div>
+  <script src="/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

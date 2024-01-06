@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>النفقات</title>
+    <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../vendor/fontawsome/all.min.css">
+    <link rel="stylesheet" href="../assets/css/mainPage.css">
+    <link rel="stylesheet" href="../assets/css/employee.css">
+    <link rel="stylesheet" href="../assets/css/machine.css">
+    <link rel="stylesheet" href="../assets/css/expenses.css">
+    <link rel="stylesheet" href="../assets/css/media.css">
+</head>
+
+<body class="position-relative">
+    <nav class="navbar navbar-expand-lg w-100">
+        <div class="container pe-3">
+            <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item logout" href="../index.html">تسجيل الخروج</a></li>
+                        </ul>
+                        <a class="nav-link dropdown-toggle pe-0" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            أحمد أحمد
+                            <img class="ms-2 me-1" id="personal-img" src="../assets/img/Ellipse 2.png"
+                                alt="personal-img" />
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 mt-1 " href="#"><i class="fa-regular fa-bell"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 mt-1 " href="#"><i class="fa-regular fa-envelope"></i></a>
+                    </li>
+                </ul>
+                <a class="navbar-brand" href="#">النفقات</a>
+                <img id="logo_image" src="../assets/img/Ellipse 1.png" alt="logo" />
+            </div>
+        </div>
+    </nav>
+    <div class="side-bar text-end ">
+        <a class="side-bar-control pe-3 me-1" href="#components" onclick="toggleSidebar()">
+            <img src="../assets/img/menu_FILL0_wght400_GRAD0_opsz48 1.png"/>
+          </a>
+          <ul id="components" class="sideBarContent w-100 list-unstyled ">
+           <li class=" sideBar-item">
+            <a class="text-decoration-none d-flex flex-row-reverse mt-3 pe-3 " href="mainPage.html">
+              <img class="icon" src="../assets/img/home_FILL0_wght400_GRAD0_opsz48 1.png"/>
+              <h6 class="mt-2 me-3"> الرئيسية</h6>
+            </a>
+           </li>
+           <li class="  employees sideBar-item">
+            <a class=" text-decoration-none d-flex flex-row-reverse mt-3 pe-3 dropdown-toggle" href="#employeeSubMenu" onclick="navigateAndCollapse(event)"  data-bs-toggle="collapse" aria-expanded="false">
+                <img  class="icon " src="../assets/img/badge_FILL0_wght400_GRAD0_opsz48 1.png" onclick="navigateToEmployees()"/>
+                <h6 class="mt-2 me-3"  onclick="navigateToEmployees()"> الموظفين</h6>
+            </a>
+            <ul id="employeeSubMenu" class="collapse list-unstyled">
+               <li>
+                <a class="employees-item text-decoration-none d-flex flex-row-reverse mt-3 pe-2" href="salaries.html">
+                  <img  class="icon" src="../assets/img/attach_money_FILL0_wght400_GRAD0_opsz48 1.png"/>
+                  <h6 class="mt-2 me-3"> الرواتب</h6>
+                </a>
+               </li>
+               <li>
+                <a class="employees-item text-decoration-none d-flex flex-row-reverse mt-3 pe-2 " href="loan.html">
+                  <img  class="icon" src="../assets/img/approval_delegation_FILL0_wght400_GRAD0_opsz48 1.png"/>
+                  <h6 class="mt-2 me-3"> السلف</h6>
+                </a>
+               </li>
+               <li>
+                <a class="employees-item text-decoration-none d-flex flex-row-reverse mt-3 pe-2 pb-2" href="checks.html">
+                  <img class="icon" src="../assets/img/payments_FILL0_wght400_GRAD0_opsz48 1.png"/>
+                  <h6 class="mt-2 me-3"> الشيكات</h6>
+                </a>
+               </li>
+            </ul>
+           </li>
+           <li class="sideBar-item">
+            <a class="text-decoration-none d-flex flex-row-reverse mt-3 pe-3" href="machines.html" >
+              <img  class="icon" src="../assets/img/construction_FILL0_wght400_GRAD0_opsz48 1.png"/>
+              <h6 class="mt-2 me-3"> الاليات</h6>
+            </a>
+           </li>
+           <li class="sideBar-item">
+            <a class="text-decoration-none d-flex flex-row-reverse mt-3 pe-3 " href="sales.html"  >
+              <img  class="icon" src="../assets/img/real_estate_agent_FILL0_wght400_GRAD0_opsz48 1.png"/>
+              <h6 class="mt-2 me-3"> المبيعات</h6>
+            </a>
+           </li>
+           <li class="active sideBar-item">
+            <a class=" text-decoration-none d-flex flex-row-reverse mt-3 pe-3" href="expenses.html" >
+              <img  class="icon" src="../assets/img/sell_FILL0_wght400_GRAD0_opsz48 1.png"/>
+              <h6 class="mt-2 me-3"> النفقات</h6>
+            </a>
+           </li>
+          <li class="sideBar-item">
+            <a href="station.html" class=" text-decoration-none d-flex flex-row-reverse mt-3 pe-3 ">
+              <img  class="icon" src="../assets/img/local_gas_station_FILL0_wght400_GRAD0_opsz48 1.png"/>
+              <h6 class="mt-2 me-3"> محطات الوقود</h6>
+            </a>
+          </li>
+          </ul>
+          
+      </div>
+<div class="expenses-contents text-center">
+  <div class=" d-flex justify-content-end gap-5">
+    <div class=" d-flex flex-row-reverse gap-3 ms-5 me-5">
+      <label for="stations">المحطة</label>
+      <select name="stations" id="stations" class="border-0">
+        <option value="محطة الهدى للمحروقات">محطة الهدى للمحروقات</option>
+        <option value="محطة الناصر للمحروقات">محطة الناصر للمحروقات</option>
+      </select>
+      <a class="btn ms-5 me-5" onclick="openAddForm()"><i class="fa-solid fa-plus"></i></a>
+    </div>
+    <div class="d-flex flex-row-reverse gap-3 ms-5 me-5">
+      <label>تاريخ اليوم</label>
+      <input class="border-0" type="date" />
+    </div>
+  </div>
+  <div class=" d-flex justify-content-end gap-5 mt-5">
+    <div class=" d-flex flex-row-reverse gap-3 ms-5 me-5">
+      <label class="mt-2">إضافة وصل</label>
+      <label for="fileInput" class="custom-file-input">
+        <span class="file-icon"><i class="fa-solid fa-plus text-dark"></i></span>
+        <span class="custom-file-label text-dark">وصل11.pdf</span>
+        <input type="file" id="fileInput" name="fileInput" onchange="updateFileName()">
+      </label>
+    </div>
+    <div class="d-flex flex-row-reverse gap-3 ms-5 me-5">
+      <label>المبلغ</label>
+      <input class="border-0" type="text" />
+    </div>
+  </div>
+  <button class="btn mt-5 mb-2" onclick="addRow()">إضافة</button>
+
+  <table id="expensesTable" class="table table-bordered mt-5 w-75">
+    <thead>
+      <tr>
+        <th>تاريخ اليوم</th>
+        <th>المحطة</th>
+        <th>إضافة وصل</th>
+        <th>المبلغ</th>
+        <th>حذف</th>
+      </tr>
+    </thead>
+    <tbody id="expensesTableBody">
+      <!-- Table body will be populated dynamically using JavaScript -->
+    </tbody>
+  </table>
+
+  <div class="form-popup-overlay" id="overlay"></div>
+  <div class="form-popup rounded text-center" id="addForm">
+    <form action="/edit" class="text-center w-100 ms-5 me-5">
+        <div class="row ms-1">
+          <div class="col-md-4 m-3">
+            <label>تاريخ اليوم</label>
+            <input class="rounded" type="date"/>
+          </div>
+          <div class="col-md-4 m-3">
+            <label>اسم المحطة</label>
+            <input class="rounded" type="text"/>
+          </div>
+          <div class="col-md-4 m-3">
+            <label>عنوان المحطة</label>
+            <input class="rounded" type="text"/>
+          </div>
+          <div class="col-md-4 m-3">
+            <label>اسم المالك</label>
+            <input class="rounded" type="text"/>
+          </div>
+          <div class="col-md-4 m-3">
+            <label>الهاتف</label>
+            <input class="rounded" type="text"/>
+          </div>
+          <div class="col-md-4 m-3">
+            <label>المبلغ المضاف</label>
+            <input class="rounded" type="text"/>
+          </div>
+          <div class="col-md-8 m-3">
+            <button type="submit" class="btn ">إضافة</button>
+            <button type="button" class="btn  cancel" onclick="closeAddForm()">إلغاء</button>
+          </div>
+        </div>
+        
+    </form>
+</div>
+</div>
+
+
+
+
+    <script src="../vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/emp.js"></script>
+    <script src="../assets/js/expenses.js"></script>
+</body>
+
+</html>

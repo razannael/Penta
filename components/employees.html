@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الموظفين</title>
+    <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../vendor/fontawsome/all.min.css">
+    <link rel="stylesheet" href="../assets/css/mainPage.css">
+    <link rel="stylesheet" href="../assets/css/employee.css">
+    <link rel="stylesheet" href="../assets/css/media.css">
+</head>
+
+<body class="position-relative">
+    <nav class="navbar navbar-expand-lg w-100">
+        <div class="container pe-3">
+            <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item logout" href="../index.html">تسجيل الخروج</a></li>
+                        </ul>
+                        <a class="nav-link dropdown-toggle pe-0" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            أحمد أحمد
+                            <img class="ms-2 me-1" id="personal-img" src="../assets/img/Ellipse 2.png"
+                                alt="personal-img" />
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 mt-1 " href="#"><i class="fa-regular fa-bell"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 mt-1 " href="#"><i class="fa-regular fa-envelope"></i></a>
+                    </li>
+                </ul>
+                <a class="navbar-brand" href="#">الموظفين</a>
+                <img id="logo_image" src="../assets/img/Ellipse 1.png" alt="logo" />
+            </div>
+        </div>
+    </nav>
+    <div class="side-bar text-end ">
+        <a class="side-bar-control pe-3 me-1" href="#components" onclick="toggleSidebar()">
+            <img src="../assets/img/menu_FILL0_wght400_GRAD0_opsz48 1.png"/>
+          </a>
+          <ul id="components" class="sideBarContent w-100 list-unstyled ">
+           <li class=" sideBar-item">
+            <a class="text-decoration-none d-flex flex-row-reverse mt-3 pe-3 " href="mainPage.html">
+              <img class="icon" src="../assets/img/home_FILL0_wght400_GRAD0_opsz48 1.png"/>
+              <h6 class="mt-2 me-3"> الرئيسية</h6>
+            </a>
+           </li>
+           <li class=" active employees sideBar-item">
+            <a class=" text-decoration-none d-flex flex-row-reverse mt-3 pe-3 dropdown-toggle" href="#employeeSubMenu" onclick="navigateAndCollapse(event)"  data-bs-toggle="collapse" aria-expanded="false">
+                <img  class="icon " src="../assets/img/badge_FILL0_wght400_GRAD0_opsz48 1.png" onclick="navigateToEmployees()"/>
+                <h6 class="mt-2 me-3"  onclick="navigateToEmployees()"> الموظفين</h6>
+            </a>
+            <ul id="employeeSubMenu" class="collapse list-unstyled">
+               <li>
+                <a class="employees-item text-decoration-none d-flex flex-row-reverse mt-3 pe-2" href="salaries.html">
+                  <img  class="icon" src="../assets/img/attach_money_FILL0_wght400_GRAD0_opsz48 1.png"/>
+                  <h6 class="mt-2 me-3"> الرواتب</h6>
+                </a>
+               </li>
+               <li>
+                <a class="employees-item text-decoration-none d-flex flex-row-reverse mt-3 pe-2 " href="loan.html">
+                  <img  class="icon" src="../assets/img/approval_delegation_FILL0_wght400_GRAD0_opsz48 1.png"/>
+                  <h6 class="mt-2 me-3"> السلف</h6>
+                </a>
+               </li>
+               <li>
+                <a class="employees-item text-decoration-none d-flex flex-row-reverse mt-3 pe-2 pb-2" href="checks.html">
+                  <img class="icon" src="../assets/img/payments_FILL0_wght400_GRAD0_opsz48 1.png"/>
+                  <h6 class="mt-2 me-3"> الشيكات</h6>
+                </a>
+               </li>
+            </ul>
+           </li>
+           <li class="sideBar-item">
+            <a class="text-decoration-none d-flex flex-row-reverse mt-3 pe-3" href="machines.html" >
+              <img  class="icon" src="../assets/img/construction_FILL0_wght400_GRAD0_opsz48 1.png"/>
+              <h6 class="mt-2 me-3"> الاليات</h6>
+            </a>
+           </li>
+           <li class="sideBar-item">
+            <a class="text-decoration-none d-flex flex-row-reverse mt-3 pe-3 " href="sales.html"  >
+              <img  class="icon" src="../assets/img/real_estate_agent_FILL0_wght400_GRAD0_opsz48 1.png"/>
+              <h6 class="mt-2 me-3"> المبيعات</h6>
+            </a>
+           </li>
+           <li class="sideBar-item">
+            <a class=" text-decoration-none d-flex flex-row-reverse mt-3 pe-3" href="expenses.html" >
+              <img  class="icon" src="../assets/img/sell_FILL0_wght400_GRAD0_opsz48 1.png"/>
+              <h6 class="mt-2 me-3"> النفقات</h6>
+            </a>
+           </li>
+          <li class="sideBar-item">
+            <a href="station.html" class=" text-decoration-none d-flex flex-row-reverse mt-3 pe-3 ">
+              <img  class="icon" src="../assets/img/local_gas_station_FILL0_wght400_GRAD0_opsz48 1.png"/>
+              <h6 class="mt-2 me-3"> محطات الوقود</h6>
+            </a>
+          </li>
+          </ul>
+          
+      </div>
+    <div class="emp-contents">
+         <!-- البحث والاضافة-->
+        <div class="add-search d-flex">
+            <button class="add-employee border-0 rounded ms-3 me-5 text-white p-1 ps-3 pe-3" onclick="openAddEmpForm()"><i class="fa-solid fa-user-plus"></i></button>
+            <div class="search-bar w-75  d-flex">
+                <a class="btn ms-5 me-4"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <input class="border-0" type="text" placeholder="اسم الموظف أو رقم الهوية">
+            </div>
+        </div>
+         <!-- عرض الموظفين-->
+        <div class="employees container mt-3">
+            <div class="row me-4 ms-3">
+                <div class="col-md-2 employee rounded text-center p-3 m-4">
+                    <img class="w-25" src="/assets/img/Ellipse 52.png" alt="employee-photo" />
+                    <h5>محمود الشيخ</h5>
+                    <h6>9610555</h6>
+                    <h6>500$</h6>
+                    <h6>0503211111</h6>
+                </div>
+                <div class="col-md-2 employee rounded text-center p-3 m-4">
+                    <img class="w-25" src="/assets/img/Ellipse 52.png" alt="employee-photo" />
+                    <h5>محمود الشيخ</h5>
+                    <h6>9610555</h6>
+                    <h6>500$</h6>
+                    <h6>0503211111</h6>
+                </div>
+                <div class="col-md-2 employee rounded text-center p-3 m-4">
+                    <img class="w-25" src="/assets/img/Ellipse 52.png" alt="employee-photo" />
+                    <h5>محمود الشيخ</h5>
+                    <h6>9610555</h6>
+                    <h6>500$</h6>
+                    <h6>0503211111</h6>
+                </div>
+                <div class="col-md-2 employee rounded text-center p-3 m-4">
+                    <img class="w-25" src="/assets/img/Ellipse 52.png" alt="employee-photo" />
+                    <h5>محمود الشيخ</h5>
+                    <h6>9610555</h6>
+                    <h6>500$</h6>
+                    <h6>0503211111</h6>
+                </div>
+                <div class="col-md-2 employee rounded text-center p-3 m-4">
+                    <img class="w-25" src="/assets/img/Ellipse 52.png" alt="employee-photo" />
+                    <h5>محمود الشيخ</h5>
+                    <h6>9610555</h6>
+                    <h6>500$</h6>
+                    <h6>0503211111</h6>
+                </div>
+                <div class="col-md-2 employee rounded text-center p-3 m-4">
+                    <img class="w-25" src="/assets/img/Ellipse 52.png" alt="employee-photo" />
+                    <h5>محمود الشيخ</h5>
+                    <h6>9610555</h6>
+                    <h6>500$</h6>
+                    <h6>0503211111</h6>
+                </div>
+                <div class="col-md-2 employee rounded text-center p-3 m-4">
+                    <img class="w-25" src="/assets/img/Ellipse 52.png" alt="employee-photo" />
+                    <h5>محمود الشيخ</h5>
+                    <h6>9610555</h6>
+                    <h6>500$</h6>
+                    <h6>0503211111</h6>
+                </div>
+                <div class="col-md-2 employee rounded text-center p-3 m-4">
+                    <img class="w-25" src="/assets/img/Ellipse 52.png" alt="employee-photo" />
+                    <h5>محمود الشيخ</h5>
+                    <h6>9610555</h6>
+                    <h6>500$</h6>
+                    <h6>0503211111</h6>
+                </div>
+                
+            </div>
+            <div class="form-popup-overlay" id="overlay"></div>
+            <div class="form-popup rounded text-center" id="add-employee-form">
+             <form action="/add" class="text-center w-75 ms-5 me-5 ">
+                <div class="user-info d-flex justify-content-center align-items-center">
+                    <div class="info me-3 ms-5 mt-3">
+                        <div class="row">
+                          <div class="col-md-8 ">
+                              <label>اسم الموظف</label>
+                              <input class="rounded" type="text"/>
+                             </div>
+                             <div class="col-md-8 mt-3">
+                              <label>رقم الهوية</label>
+                              <input class="rounded" type="text"/>
+                             </div>
+                             <div class="col-md-8 mt-3">
+                              <label>الراتب</label>
+                              <input class="rounded" type="text"/>
+                             </div>
+                             <div class="col-md-8 mt-3">
+                              <label>رقم الهاتف</label>
+                              <input class="rounded" type="text"/>
+                             </div>
+                        </div>
+                          
+                      </div>
+                      <div class="personal-img w-100 text-center mt-5" >
+                             <div class="w-100 ms-3" id="preview-personal-photo">
+                              <img class="w-100" src="/assets/img/Ellipse 36.png"/>
+                             </div>
+                             <div class="input-photo w-100 mt-5 ms-3">
+                              <input type="file" id="photoInput" accept="image/*" onchange="previewPhoto(event)">
+                              <label for="photoInput" class="custom-file-label btn">إضافة صورة</label>
+                             </div>
+                      </div>
+                </div>
+                <button class="btn mt-5" type="submit">إضافة</button>
+             </form>
+         </div>
+        </div>
+    </div>
+
+    <script src="../vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/emp.js"></script>
+</body>
+
+</html>

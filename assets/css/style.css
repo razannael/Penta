@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;500;600&display=swap');
+/* font-family: 'Cairo', sans-serif; */
+header {
+  height: 800px;
+  flex-shrink: 0;
+  background-image: url("/assets/img/36bff525fe0d57ade3674309a92dddc9.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.w-60 {
+  width: 60%;
+}
+header h2 {
+  text-align: center;
+  color: white;
+  font-size: 60px;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+header a{
+        width: 20%;
+        text-align: center;
+        color: white;
+        font-size: 20px !important;
+        font-family: Cairo !important;
+        font-weight: 600;
+        word-wrap: break-word;
+        border-radius: 10px;
+        background-color: #c08936 !important;
+
+}
+.header-content{
+    position: absolute;
+    top: 40%;
+}
+@media screen and (max-width :1000px) {
+    .header-content h2{
+        font-size: 40px;
+        margin-left: 1px !important;
+    }
+    .header-content a{
+      font-size: 15px;
+      font-weight: 400;
+      width: 60% !important;
+    }
+}
+@media screen and (max-width :635px) {
+  .header-content h2{
+      font-size: 33px;
+      margin-left: 1px !important;
+  }
+  .header-content a{
+    font-size: 12px;
+    font-weight: 400;
+    width: 50% !important;
+    padding: 1% !important;
+  }
+}
+@media screen and (max-width :520px) {
+  .header-content h2{
+      font-size: 33px;
+      margin-left: 1px !important;
+      width: 90% !important;
+  }
+  .header-content a{
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: -20px !important;
+    padding: 1% !important;
+  }
+  .header-content{
+    align-items: start !important;
+    width: 50% !important;
+  }
+}
+ 

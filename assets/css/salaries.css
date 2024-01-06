@@ -1,0 +1,23 @@
+.salari-taps a.active{
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: rgba(128, 77, 16, 0.13) ;
+    font-weight: 600;
+    color: rgb(231, 140, 29) !important;
+    border-bottom:  solid 1.5px rgb(173, 109, 31) !important;
+}
+
+.salari-taps a{
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: #9c896431;
+    color: #fff !important;
+    border-bottom:  solid 1.5px #fff !important;
+}
+
+.salari-contents {
+    margin-left: 35%;
+}
+.salari-title{
+    margin-left: 30% !important;
+}

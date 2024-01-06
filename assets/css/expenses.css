@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;500;600&display=swap');
+/* font-family: 'Cairo', sans-serif; */
+.expenses-contents{
+    margin-top: 8%;
+    font-family: 'Cairo', sans-serif;
+    color: rgb(59, 50, 50);
+    width: 80%;
+}
+.expenses-contents input ,.expenses-contents select ,.expenses-contents a , .expenses-contents .custom-file-input{
+    background-color: rgba(175, 124, 47, 0.603);
+}
+.expenses-contents label{
+    font-weight: 600;
+}
+
+.expenses-contents select option:hover{
+    background-color: #fff;
+}
+.expenses-contents select:focus , .expenses-contents input{
+    outline: none;
+}
+
+.custom-file-input {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  .custom-file-input input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 90%;
+    min-height: 90%;
+    font-size: 80px;
+    text-align: right;
+    opacity: 0;
+    outline: none;
+    cursor: pointer;
+    display: block;
+  }
+
+  .custom-file-label {
+    display: inline-block;
+    padding: 6px 10px;
+    border: 1px solid #eee7d9;
+    border-radius: 2px;
+    background-color: #eee7d9;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .file-icon {
+    margin-right: 8px;
+  }
+
+  .expenses-contents button {
+    background-color: rgba(175, 124, 47, 0.603);
+    margin-left: 20%;
+  }
+
+  .expenses-contents button:hover , .expenses-contents a:hover{
+    background-color: rgba(175, 124, 47, 0.603);
+  }
+
+  .expenses-contents table{
+    margin-left: 15%;
+    border-color: rgb(173, 163, 151) !important;
+  }
+
+  th{
+    background-color: rgba(177, 133, 66, 0.603) !important;
+    
+  }
