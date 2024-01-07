@@ -1,0 +1,19 @@
+.custom-alert {
+    display: none;
+    position: fixed;
+    top: 97%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #f8b3b9; /* Red background color */
+    color: #721c24; /* Dark red text color */
+    border: 1px solid  #f8b3b9; /* Red border color */
+    border-radius: 5px;
+    width: 350px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .custom-alert.show {
+    display: block;
+  }
