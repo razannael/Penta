@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../assets/css/station.css">
     <link rel="stylesheet" href="../assets/css/checks.css">
     <link rel="stylesheet" href="../assets/css/media.css">
+    <link rel="stylesheet" href="../assets/css/stylevalidation.css">
 </head>
 
 <body class="position-relative">
@@ -136,47 +137,48 @@
           <i class="fa-solid fa-money-check me-2 mt-2 fs-4"></i>
           <h5 class="mt-2 mb-4">إضافة سلفة</h5>
          </div>
-           <form action="/edit" class="text-center w-100 ms-5 me-3">
+           <form class="text-center w-100 ms-5 me-3" onsubmit="return validateFormAddLoan()">
                <div class="row ms-2">
                  <div class="col-md-4 m-2">
                    <label>تاريخ اليوم</label>
-                   <input class="rounded" type="date"/>
+                   <input class="rounded" type="date" id="date"/>
                  </div>
                  <div class="col-md-4 m-2">
                    <label>الموظف</label>
-                   <input class="rounded" type="text"/>
+                   <input class="rounded" type="text" id="emp"/>
                  </div>
                  <div class="col-md-4 m-2">
                    <label>نوع الدفعة</label>
-                   <input class="rounded" type="text"/>
+                   <input class="rounded" type="text" id="type1"/>
                    <h6 class="desc-text">كاش أو شيكات</h6>
                  </div>
                  <div class="col-md-4 m-2">
                    <label>حالة الدفعة</label>
-                   <input class="rounded" type="text"/>
+                   <input class="rounded" type="text" id="state"/>
                    <h6 class="desc-text">راتب أو عمل إضافي أو سلفة</h6>
                  </div>
                  <div class="col-md-4 m-2">
                    <label>المبلغ</label>
-                   <input class="rounded" type="text"/>
+                   <input class="rounded" type="text" id ="amount"/>
                  </div>
                  <div class="col-md-4 m-2">
                    <label>إضافة شيك</label>
-                   <input class="rounded w-75" type="file" />
+                   <input class="rounded w-75" type="file" id="add-check"/>
                  </div>
                  <div class="col-md-8 m-2">
                    <button type="submit" class="btn ">إضافة</button>
                    <button type="button" class="btn  cancel" onclick="closeEditForm()">إلغاء</button>
                  </div>
-               </div>
-               
+               </div>   
            </form>
+           <div id="customAlert" class="custom-alert"></div>
        </div>
     </div>
 
     <script src="../vendor/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/emp.js"></script>
+    <script src="../assets/js/formValidation.js"></script>
 </body>
 
 </html>

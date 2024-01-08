@@ -58,3 +58,87 @@ async function fetchStationData(stationId) {
     return null;
   }
 }
+
+//validation for add employee form
+function validateFormAddEmp() {
+
+  let name = document.getElementById('emp-name').value;
+  let empId = document.getElementById('emp-id').value;
+  let empSal = document.getElementById('emp-sal').value;
+  let empPhone = document.getElementById('emp-phone').value;
+
+  if (name === "" || empId === "" || empSal === "" || empPhone === "") {
+    showAlert("يرجى ملء كافة الحقول.");
+    return false;
+  }
+  return true;
+}
+
+
+//validation for add check form
+function validateFormAddCheck() {
+
+  let date = document.getElementById('date').value;
+  let emp = document.getElementById('emp').value;
+  let amount = document.getElementById('amount').value;
+  let addCheck = document.getElementById('add-check').value;
+
+  if (date === "" || emp === "" || amount === "" || addCheck === "") {
+    showAlert("يرجى ملء كافة الحقول.");
+    return false;
+  }
+  return true;
+}
+
+//validation for add loan form
+function validateFormAddLoan() {
+
+  let date = document.getElementById('date').value;
+  let emp = document.getElementById('emp').value;
+  let amount = document.getElementById('amount').value;
+  let addCheck = document.getElementById('add-check').value;
+  let state = document.getElementById('state').value;
+  let type1 = document.getElementById('type1').value;
+
+  if (date === "" || emp === "" || amount === "" || addCheck === "" || state ==="" || type1 ==="") {
+    showAlert("يرجى ملء كافة الحقول.");
+    return false;
+  }
+  return true;
+}
+
+
+//validation for add salary form
+function validateFormAddSal() {
+
+  let date = document.getElementById('date').value;
+  let emp = document.getElementById('emp').value;
+  let amount = document.getElementById('amount').value;
+  let addCheck = document.getElementById('add-check').value;
+  let state = document.getElementById('state').value;
+  let type1 = document.getElementById('type1').value;
+
+  if (date === "" || emp === "" || amount === "" || addCheck === "" || state ==="" || type1 ==="") {
+    showAlert("يرجى ملء كافة الحقول.");
+    return false;
+  }
+  return true;
+}
+
+
+//validation for add hours form
+function validateFormAddHours() {
+
+  let date = document.getElementById('date').value;
+  let emp = document.getElementById('sec-name').value;
+  let amount = document.getElementById('fir-name').value;
+  let addCheck = document.getElementById('date2').value;
+  let state = document.getElementById('hour-sal').value;
+  let type1 = document.getElementById('hours-num').value;
+
+  if (date === "" || emp === "" || amount === "" || addCheck === "" || state ==="" || type1 ==="") {
+    showAlert("يرجى ملء كافة الحقول.");
+    return false;
+  }
+  return true;
+}

@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../assets/css/mainPage.css">
     <link rel="stylesheet" href="../assets/css/employee.css">
     <link rel="stylesheet" href="../assets/css/media.css">
+    <link rel="stylesheet" href="../assets/css/stylevalidation.css">
+    
 </head>
 
 <body class="position-relative">
@@ -176,25 +178,25 @@
             </div>
             <div class="form-popup-overlay" id="overlay"></div>
             <div class="form-popup rounded text-center" id="add-employee-form">
-             <form action="/add" class="text-center w-75 ms-5 me-5 ">
+             <form class="text-center w-75 ms-5 me-5 " onsubmit="return validateFormAddEmp()">
                 <div class="user-info d-flex justify-content-center align-items-center">
                     <div class="info me-3 ms-5 mt-3">
                         <div class="row">
                           <div class="col-md-8 ">
                               <label>اسم الموظف</label>
-                              <input class="rounded" type="text"/>
+                              <input class="rounded" type="text" id="emp-name"/>
                              </div>
                              <div class="col-md-8 mt-3">
                               <label>رقم الهوية</label>
-                              <input class="rounded" type="text"/>
+                              <input class="rounded" type="text" id="emp-id"/>
                              </div>
                              <div class="col-md-8 mt-3">
                               <label>الراتب</label>
-                              <input class="rounded" type="text"/>
+                              <input class="rounded" type="text" id="emp-sal"/>
                              </div>
                              <div class="col-md-8 mt-3">
                               <label>رقم الهاتف</label>
-                              <input class="rounded" type="text"/>
+                              <input class="rounded" type="text" id="emp-phone"/>
                              </div>
                         </div>
                           
@@ -209,8 +211,9 @@
                              </div>
                       </div>
                 </div>
-                <button class="btn mt-5" type="submit">إضافة</button>
+                <button class="btn mt-5" type="submit" >إضافة</button>
              </form>
+             <div id="customAlert" class="custom-alert"></div>
          </div>
         </div>
     </div>
@@ -218,6 +221,7 @@
     <script src="../vendor/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/emp.js"></script>
+    <script src="../assets/js/formValidation.js"></script>
 </body>
 
 </html>

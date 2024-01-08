@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../assets/css/checks.css">
     <link rel="stylesheet" href="../assets/css/salaries.css">
     <link rel="stylesheet" href="../assets/css/media.css">
+    <link rel="stylesheet" href="../assets/css/stylevalidation.css">
     
 </head>
 
@@ -159,41 +160,41 @@
               <i class="fa-solid fa-money-check me-2 mt-2 fs-4"></i>
               <h5 class="mt-2 mb-2">إضافة ساعات العمل الإضافية</h5>
              </div>
-             <form action="/add" class="text-center w-100 ms-5">
-                <div class="row ms-2">
-                  <div class="col-md-12 ms-3 mb-1">
-                    <label class="mb-1">تاريخ اليوم</label>
-                    <br>
-                    <input class="rounded" type="date"/>
-                  </div>
-                  <div class="col-md-4 m-1">
-                    <label>الاسم الثاني</label>
-                    <input class="rounded" type="text"/>
-                  </div>
-                  <div class="col-md-4 m-1">
-                    <label>الاسم الأول</label>
-                    <input class="rounded" type="text"/>
-                  </div>
-                  <div class="col-md-12 ms-3 mb-1">
-                    <label class="mb-1">تاريخ العمل الإضافي</label>
-                    <br>
-                    <input class="rounded" type="date"/>
-                  </div>
-                  <div class="col-md-4 m-2">
-                    <label>أجر الساعة بالدولار</label>
-                    <input class="rounded" type="text"/>
-                  </div>
-                  <div class="col-md-4 m-1">
-                    <label>عدد الساعات</label>
-                    <input class="rounded" type="number"/>
-                  </div>
-                  <div class="col-md-8 m-1">
-                    <button type="submit" class="btn ">إضافة</button>
-                    <button type="button" class="btn  cancel" onclick="closeEditForm()">إلغاء</button>
-                  </div>
+             <form class="text-center w-100 ms-5" onsubmit="return validateFormAddHours()">
+              <div class="row ms-2">
+                <div class="col-md-12 ms-3 mb-1">
+                  <label class="mb-1">تاريخ اليوم</label>
+                  <br>
+                  <input class="rounded" type="date" id="date">
                 </div>
-                
-            </form>
+                <div class="col-md-4 m-1">
+                  <label>الاسم الثاني</label>
+                  <input class="rounded" type="text" id="sec-name"/>
+                </div>
+                <div class="col-md-4 m-1">
+                  <label>الاسم الأول</label>
+                  <input class="rounded" type="text" id="fir-name"/>
+                </div>
+                <div class="col-md-12 ms-3 mb-1">
+                  <label class="mb-1">تاريخ العمل الإضافي</label>
+                  <br>
+                  <input class="rounded" type="date" id="date2"/>
+                </div>
+                <div class="col-md-4 m-2">
+                  <label>أجر الساعة بالدولار</label>
+                  <input class="rounded" type="text" id="hour-sal"/>
+                </div>
+                <div class="col-md-4 m-1">
+                  <label>عدد الساعات</label>
+                  <input class="rounded" type="number" id="hours-num"/>
+                </div>
+                <div class="col-md-8 m-1">
+                  <button type="submit" class="btn ">إضافة</button>
+                  <button type="button" class="btn  cancel" onclick="closeEditForm()">إلغاء</button>
+                </div>
+              </div>
+          </form>
+          <div id="customAlert" class="custom-alert"></div>
            </div>
  
 
@@ -222,6 +223,7 @@
     <script src="../vendor/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/emp.js"></script>
+    <script src="../assets/js/formValidation.js"></script>
 </body>
 
 </html>
