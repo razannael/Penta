@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../assets/css/machine.css">
     <link rel="stylesheet" href="../assets/css/expenses.css">
     <link rel="stylesheet" href="../assets/css/media.css">
+    <link rel="stylesheet" href="../assets/css/stylevalidation.css">
 </head>
 
 <body class="position-relative">
@@ -154,39 +155,40 @@
 
   <div class="form-popup-overlay" id="overlay"></div>
   <div class="form-popup rounded text-center" id="addForm">
-    <form action="/edit" class="text-center w-100 ms-5 me-5">
-        <div class="row ms-1">
-          <div class="col-md-4 m-3">
-            <label>تاريخ اليوم</label>
-            <input class="rounded" type="date"/>
-          </div>
-          <div class="col-md-4 m-3">
-            <label>اسم المحطة</label>
-            <input class="rounded" type="text"/>
-          </div>
-          <div class="col-md-4 m-3">
-            <label>عنوان المحطة</label>
-            <input class="rounded" type="text"/>
-          </div>
-          <div class="col-md-4 m-3">
-            <label>اسم المالك</label>
-            <input class="rounded" type="text"/>
-          </div>
-          <div class="col-md-4 m-3">
-            <label>الهاتف</label>
-            <input class="rounded" type="text"/>
-          </div>
-          <div class="col-md-4 m-3">
-            <label>المبلغ المضاف</label>
-            <input class="rounded" type="text"/>
-          </div>
-          <div class="col-md-8 m-3">
-            <button type="submit" class="btn ">إضافة</button>
-            <button type="button" class="btn  cancel" onclick="closeAddForm()">إلغاء</button>
-          </div>
+    <form  class="text-center w-100 ms-5 me-5" onsubmit="return validateForm()">
+      <div class="row ms-1">
+        <div class="col-md-4 m-3">
+          <label>تاريخ اليوم</label>
+          <input class="rounded" type="date"  id="day-date"/>
         </div>
-        
+        <div class="col-md-4 m-3">
+          <label>اسم المحطة</label>
+          <input class="rounded" type="text" id="stationName"/>
+        </div>
+        <div class="col-md-4 m-3">
+          <label>عنوان المحطة</label>
+          <input class="rounded" type="text" id="stationAddress"/>
+        </div>
+        <div class="col-md-4 m-3">
+          <label>اسم المالك</label>
+          <input class="rounded" type="text" id="ownerName"/>
+        </div>
+        <div class="col-md-4 m-3">
+          <label>الهاتف</label>
+          <input class="rounded" type="text" id="phone"/>
+        </div>
+        <div class="col-md-4 m-3">
+          <label>المبلغ المضاف</label>
+          <input class="rounded" type="text" id="amount"/>
+        </div>
+        <div class="col-md-8 m-3">
+          <button type="submit" class="btn " >إضافة</button>
+          <button type="button" class="btn  cancel" onclick="closeAddForm()">إلغاء</button>
+        </div>
+      </div>
+
     </form>
+    <div id="customAlert" class="custom-alert"></div>
 </div>
 </div>
 
@@ -197,6 +199,7 @@
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/emp.js"></script>
     <script src="../assets/js/expenses.js"></script>
+    <script src="../assets/js/formValidation.js"></script>
 </body>
 
 </html>

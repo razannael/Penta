@@ -142,3 +142,37 @@ function validateFormAddHours() {
   }
   return true;
 }
+
+//validation for add machine form
+function validateFormAddMachine() {
+
+  let name = document.getElementById('name').value;
+  let date = document.getElementById('date').value;
+  let price = document.getElementById('price').value;
+  let type = document.getElementById('type1').value;
+  let fileInput = document.getElementById('file-input').value;
+  let remain = document.getElementById('remain').value;
+
+  if (name === "" || date === "" || price === "" || type === "" || fileInput ==="" || remain ==="") {
+    showAlert("يرجى ملء كافة الحقول.");
+    return false;
+  }
+  return true;
+}
+
+//validation for add sale form
+function validateFormAddSale() {
+
+  let name = document.getElementById('sec-name').value;
+  let date = document.getElementById('fir-name').value;
+  let price = document.getElementById('date').value;
+  let type = document.getElementById('pay').value;
+  let fileInput = document.getElementById('type').value;
+  let remain = document.getElementById('phone').value;
+
+  if (name === "" || date === "" || price === "" || type === "" || fileInput ==="" || remain ==="") {
+    showAlert("يرجى ملء كافة الحقول.");
+    return false;
+  }
+  return true;
+}

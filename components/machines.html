@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../assets/css/employee.css">
     <link rel="stylesheet" href="../assets/css/machine.css">
     <link rel="stylesheet" href="../assets/css/media.css">
+    <link rel="stylesheet" href="../assets/css/stylevalidation.css">
 </head>
 
 <body class="position-relative">
@@ -166,28 +167,28 @@
         </div>
             <div class="form-popup-overlay" id="overlay"></div>
             <div class="form-popup rounded text-center" id="add-machine-form">
-                <form action="/edit" class="text-center w-100 ms-5 me-5">
+                <form class="text-center w-100 ms-5 me-5" onsubmit="return validateFormAddMachine()">
                     <div class="row ms-1">
                       <div class="col-md-4 m-3">
                         <label>اسم الالية</label>
-                        <input class="rounded" type="text"/>
+                        <input class="rounded" type="text" id="name"/>
                       </div>
                       <div class="col-md-4 m-3">
                         <label>تاريخ اليوم</label>
-                        <input class="rounded" type="date"/>
+                        <input class="rounded" type="date" id="date"/>
                       </div>
                       <div class="col-md-4 m-3">
                         <label>سعر الالية</label>
-                        <input class="rounded" type="text"/><span>$</span>
+                        <input class="rounded" type="text" id="price"/><span>$</span>
                       </div>
                       <div class="col-md-4 m-3 mb-1">
                         <label>نوع الدفعة</label>
-                        <input class="rounded" type="text"/>
+                        <input class="rounded" type="text" id="type1"/>
                         <p class="desc mt-2">كاش أو شيكات</p>
                     </div>
                       <div class="col-md-4 m-3 mt-0">
                         <label>المتبقي</label>
-                        <input class="rounded" type="text"/>
+                        <input class="rounded" type="text" id="remain"/>
                       </div>
                       <div class="col-md-4 m-3 mt-4">
                         <div class="file-input-container ">
@@ -204,6 +205,7 @@
                     </div>
                     
                 </form>
+                <div id="customAlert" class="custom-alert"></div>
             </div>
         </div>
 
@@ -211,6 +213,7 @@
     <script src="../vendor/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/emp.js"></script>
+    <script src="../assets/js/formValidation.js"></script>
 </body>
 
 </html>

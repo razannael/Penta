@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../assets/css/employee.css">
     <link rel="stylesheet" href="../assets/css/machine.css">
     <link rel="stylesheet" href="../assets/css/media.css">
+    <link rel="stylesheet" href="../assets/css/stylevalidation.css">
 </head>
 
 <body class="position-relative">
@@ -161,42 +162,42 @@
 
                  <h5 class="mt-2 mb-2">إضافة ورشة</h5>
                 </div>
-                <form action="/add" class="text-center w-100 ms-5">
+                <form class="text-center w-100 ms-5" onsubmit="return validateFormAddSale()">
                    <div class="row ms-2">
                      <div class="col-md-12 ms-3 mb-2">
                        <label class="mb-1">تاريخ اليوم</label>
                        <br>
-                       <input class="rounded" type="date"/>
+                       <input class="rounded" type="date" id="date"/>
                      </div>
                      <label class="mb-0 ms-3">اسم صاحب الورشة</label>
                      <div class="col-md-4 m-1 mt-1">
-                       <input class="rounded" type="text" placeholder="الاسم الثاني"/>
+                       <input class="rounded" type="text" placeholder="الاسم الثاني" id="sec-name"/>
                      </div>
                      <div class="col-md-4 m-1 mt-1">
-                       <input class="rounded" type="text" placeholder="الاسم الاول"/>
+                       <input class="rounded" type="text" placeholder="الاسم الاول" id="fir-name"/>
                      </div>
                      <div class="col-md-12 ms-3 mt-0">
                        <label class="mb-1">آلية الدفع</label>
                        <br>
-                       <input class="rounded" type="text"/>
+                       <input class="rounded" type="text" id="pay"/>
                        <p class="desc m-0 mt-1">مقاولة-ساعات-أكواب</p>
                      </div>
                      <div class="col-md-4 m-2 mb-0 mt-0">
                        <label>نوع الورشة</label>
-                       <input class="rounded pb-0" type="text"/>
+                       <input class="rounded pb-0" type="text" id="type"/>
                        <p class="desc m-0 mt-1">بناء-نقليات-طمم-حفريات</p>
                      </div>
                      <div class="col-md-4 m-1 mb-0">
                        <label>رقم الهاتف</label>
-                       <input class="rounded pb-0" type="text"/>
+                       <input class="rounded pb-0" type="text" id="phone"/>
                      </div>
                      <div class="col-md-8">
                         <button type="submit" class="btn mb-5 ">إضافة</button>
                         <button type="button" class="btn mb-5  cancel" onclick="closeAddSaleForm()">إلغاء</button>
                      </div>
-                   </div>
-                   
+                   </div>  
                </form>
+               <div id="customAlert" class="custom-alert"></div>
               </div>
 
               <div class="form-popup rounded text-center mb-3" id="sale-details">
@@ -216,6 +217,7 @@
     <script src="../vendor/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/emp.js"></script>
+    <script src="../assets/js/formValidation.js"></script>
 </body>
 
 </html>
